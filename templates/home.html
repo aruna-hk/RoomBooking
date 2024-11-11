@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+{% if user.is_authenticated %}
+    <h4> Welcome {{user.username}} </h4>
+    <form action="" method="get">
+	    {{form.as_p}}
+	    <input type=submit value=select>
+    </form>
+    {% if purpose %}
+    <h3>ROOM PURPOSE SELECTED, AVAILABLE ROOMS ARE:</h3>
+    <ul>
+	    {% for room in rooms %}
+	    <li>
+		    <h5>room name: {{room.room_name}}</h5>
+		    <div>capacity: {{room.room_capacity}}</div>
+		    {% if purpose == 'accomodation' %}
+		    <div>Price: {{room.room_price}}</div>
+		    {% endif %}
+		    <p> Description: {{room.room_description}}</p>
+		    <button type=submit>BOOK ROOM</button>
+	    </li>
+	    {% endfor %}
+    </ul>
+    {% endif %}
+    <form action={% url 'logout' %} method='post'>
+	    {% csrf_token %}
+	    <input type=submit value=logout>
+    </form>
+{% else %}
+    <h3>
+	    <a href={% url 'login' %}>Login </a> <a href={% url 'register' %}>signup</a>
+    </h3>
+{% endif %}
+{% endblock content %}
+
