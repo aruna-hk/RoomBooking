@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <main class="container">
+        <aside class="left-aside">
+            <div class="demo">
+                <h2>Welcome to Our Site!</h2>
+            </div>
+        </aside>
+
+        <section class="center">
+            {% block reg_content %}
+            {% endblock reg_content %}
+        </section>
+
+        <aside class="right-aside">
+            <div class="auth-buttons">
+                {% block loginorregister %}
+                <h3>Login with</h3>
+                {% endblock loginorregister %}
+                <button class="social-btn google">Google</button>
+                <button class="social-btn twitter">Apple</button>
+            </div>
+            <div class="sign-up">
+            {% block logreg %}
+                <p>Don't have an account? <a href="{% url 'register' %}">Sign up here</a></p>
+            {% endblock logreg %}
+            </div>
+        </aside>
+    </main>
+    <footer>
+    </footer>
+</body>
+</html>
+
