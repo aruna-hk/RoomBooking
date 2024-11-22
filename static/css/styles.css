@@ -2,63 +2,33 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
 }
-
 html {
-    height: 100%;
+    height:100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f4f4f4;
+    background-color: navajowhite;
 }
 
-.container {
+.container{
     display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-    max-width: 1200px;
-    width: 100%;
-    padding: 20px;
-}
-
-.left-aside, .right-aside {
-    flex: 1;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-}
-
-.left-aside {
-    margin-right: 20px;
-}
-
-.demo {
-    text-align: center;
-}
-
-.demo h2 {
-    color: #333;
-}
-
-.demo p {
-    color: #555;
-    font-size: 14px;
-}
-
-.demo-img {
-    max-width: 100%;
-    height: auto;
-    margin-top: 20px;
-    border-radius: 8px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 .center {
-    flex: 1.5;
+    border: solid 1px fuchsia;
     background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2em;
+    border-radius: 1.5em;
+}
+
+.left-aside, .right-aside {
+    border: solid blue 1px;
+    padding: 1.5em;
+    border-radius: 1em;
 }
 
 .login-form {
@@ -83,21 +53,21 @@ form > div label {
 }
 
 form > div input {
-    width: 100%;
+    width: 90%;
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
+    border-radius: 0.5em;
+    font-size: 1.5em;
 }
 
 .login-btn, .register-btn {
-    width: 100%;
-    padding: 12px;
+    width: 90%;
+    padding: 0.9em;
     background-color: #007BFF;
     color: #fff;
     border: none;
-    border-radius: 4px;
-    font-size: 16px;
+    border-radius: 1em;
+    font-size: 1em;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -108,7 +78,7 @@ form > div input {
 
 .forgot-password {
     text-align: center;
-    margin-top: 10px;
+    margin-top: 1em;
 }
 
 .forgot-password a {
@@ -124,17 +94,16 @@ form > div input {
 }
 
 .auth-buttons h3 {
-    margin-bottom: 15px;
     color: #333;
 }
 
 .social-btn {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
+    width: 95%;
+    padding: 0.5em;
+    margin-bottom: 0.6em;
     border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
+    border-radius: 1em;
+    font-size: 1em;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -144,18 +113,6 @@ form > div input {
     color: white;
 }
 
-.social-btn.google:hover {
-    background-color: #c1351d;
-}
-
-.social-btn.facebook {
-    background-color: #3b5998;
-    color: white;
-}
-
-.social-btn.facebook:hover {
-    background-color: #2d4373;
-}
 
 .social-btn.twitter {
     background-color: #1DA1F2;
@@ -185,7 +142,12 @@ form > div input {
     }
 
     .left-aside, .right-aside {
-        margin: 10px 0;
+        margin: 1.5em;
     }
 }
 
+@media (min-width: 7) {
+    .container {
+        justify-content: space-around;
+    }
+}
