@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css %}
+<link rel=stylesheet href={% static 'css/home.css' %}>
+{% endblock css %}
+{% block profile_home %}
+<header>
+  <div class="logo"></div>
+    <menu>
+      <li><a href="#"><img src=""></a></li>
+      <li><a href={% url 'logout' %}>logout</a></li>
+    </menu>
+</header>
+{% endblock profile_home %}
+{% block content %}
+<main>
+  <header>
+    <h1> Room booking </h1>
+    <p> Booking a room? <em>Select room purpose below</em></p>
+  </header>
+  <div id="form">
+    <div class="form-row">
+      <label for="purpose">Select purpose of Room</label>
+        <select id="purpose" name="purpose">
+          <option value="accomodation">Sleeping Room</option>
+          <option value="meeting">Meeting Room</option>
+        </select>
+    </div>
+    <div class="form-row">
+      <button id=select-btn> Select </button>
+    </div>
+  </div>
+  </form>
+  <section id=rooms>
+  </section>
+</main>
+{% endblock content %}
+{% block footer %}
+<footer>&copy; kiptoo haron</footer>
+{% endblock footer %}
+{% block scripts %}
+<script src={% static 'js/bookroom.js' %}></script>
+<script src={% static 'js/rooms.js' %}></script>
+{% endblock scripts %}

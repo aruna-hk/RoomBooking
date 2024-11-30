@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+html {
+  background: silver;
+}
+body > header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  
+  width: 100%;
+  background: transparent;
+}
+header menu img {
+  width: 50px;
+  height: 50px;
+  border-radius: 1em;
+}
+header li {
+  list-style: none;
+}
+menu {
+  margin: 1em;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: grey;
+  color: wheat;
+  text-align: center;
+}
+main {
+  width: 95%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main > header {
+  text-align: center;
+  background-color: #F6F7F8;
+  border: 1px solid #D6D9DC;
+  border-radius: 1em;
+  margin: 40px 0;
+  padding: 50px;
+}
+
+#form {
+  background-color: #F6F7F8;
+  border: 1px solid #D6D9DC;
+  border-radius: 3px;
+  width: 85%;
+  padding: 50px;
+  margin: 0 0 40px 0;
+}
+.form-row {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.form-row button {
+  font-size: 16px;
+  font-weight: bold;
+
+  color: #FFFFFF;
+  background-color: #5995DA;
+
+  border: none;
+  border-radius: 3px;
+
+  padding: 10px;
+  cursor: pointer;
+}
+
+.form-row button:hover {
+  background-color: #76AEED;
+}
+
+.form-row button:active {
+  background-color: #407FC7;
+}
+.form-row select {
+  padding: 1em;
+  font-size: 14px;
+}
+label {
+  padding: 1em;
+  font-weight: bold;
+}
+@media (max-width: 600px) {
+  main > header{
+    width: 80%;
+    padding: 2em;
+  }
+  .form-row {
+    flex-direction: column;
+  }
+}
+@media(min-width: 725px) {
+  .form-row {
+    justify-content: space-around;
+    padding: 1em;
+    margin: 5px;
+  }
+  #form {
+    padding: 0px;
+  }
+}
+menu li img {
+  background: green;
+}
+
+section {
+  display: flex;
+  background:  #F6F7F8;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+article {
+  display: flex;
+  flex-direction: column;
+  border: solid 1px;
+  margin: 2em;
+  padding: 0.5em;
+  border-radius: 1em;
+}
+article button {
+  align-self: flex-end;
+  font-size: 20px;
+  border-radius: 2em;
+  background: green;
+}
+@media (max-width: 400px) {
+  section {
+    flex-direction: column;
+  }
+}

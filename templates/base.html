@@ -1,21 +1,28 @@
 {% load static %}
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content=width=device-width>
-		<title>Book Room</title>
-                <link rel=stylesheet href={% static 'css/base.css' %}>
-	</head>
-	<body>
-		{% block profile_home %}
-		<header>
-			<h1>Room Booking Application</h2>
-			<h3> <a href={% url 'home' %}>Home</a> <a href={% url 'about' %}>About</a> </h3>
-		</header>
-		{% endblock profile_home %}
-		{% block content %}
-	        {% endblock content %}
-	</body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content=width=device-width>
+    <title>Book Room</title>
+    {% block css %}
+    <link rel=stylesheet href={% static 'css/base.css' %}>
+    <link rel=stylesheet href={% static 'css/styles.css' %}>
+    {% endblock css %}
+  </head>
+  <body>
+    {% block profile_home %}
+    <header>
+      <h1>Room Booking Application</h2>
+      <h3> <a href={% url 'home' %}>Home</a> <a href={% url 'about' %}>About</a> </h3>
+    </header>
+    {% endblock profile_home %}
+    {% block content %}
+    {% endblock content %}
+    {% block footer %}
+    {% endblock footer %}
+    {% block scripts %}
+    {% endblock scripts %}
+  </body>
 </html>
 
